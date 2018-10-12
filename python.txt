@@ -1,0 +1,489 @@
+*DAY1*
+
+Q1
+
+name=input("Enter ur name")
+print("Hello," NAME)
+
+Q2
+
+num1=int(input())
+num2=int(input())
+sum=num1+num2
+x=0
+if(sum>x):
+    print("sum is positive")
+else:
+    print("sum is negative")
+
+
+Q3
+
+x=9
+n=int(input("number:"))
+while True:
+     if n!=x:
+         n=int(input("number:"))
+     else:
+        print("Correct!")
+        breakwhile True:
+     if n!=x:
+         n=int(input("number:"))
+     else:
+        print("Correct!")
+        break
+
+Q4
+
+firstname = 'Rishabh'
+lastname = 'Singh'
+wholename = "{0} {1}".format(firstname , lastname) 
+print(wholename)
+
+
+
+
+Q5
+
+string=str(input())
+print(string.swapcase())
+
+
+Q6
+
+a=[]
+x=int(input("Enter the number of numbers u want to enter into the list"))
+i=0
+for i in range(x):
+	a.append(int(input()))
+b=0
+for i in range(x):
+	b+=a[i]
+print(b)
+b=1
+for i in range(x):
+	b*=a[i]
+print(b)
+
+
+Q7
+
+list1=[]
+print("type break after end")
+while True:
+    num = input()
+    if num=="break":
+        break
+    list1.append(num)
+print(list1)
+f=0
+x= input()
+for y in list1:
+    if x == y :
+        f=1
+        break
+if f==1:
+    print('Present')
+else:
+    print('Not Present')
+
+Q8 part-1
+
+
+l1=['a','b','c','d'];
+l2=['e','f','b','g'];
+l3=['a','b','c','d'];
+l4=['e','f','g','h'];
+
+def is_member1(x):
+    if (x in l2):
+        return ('True')
+def is_member2(y):
+    if( y in l4):
+        return ('True')
+    
+print('Using Is_member function')
+print()
+        
+print('l1 = ',l1);
+print()
+print('l2 = ',l2);
+
+for i in l1:
+    m=is_member1(i)
+    if m=='True':
+        print(i,' is present')
+        break;
+       
+if m=='True':
+    print(m)
+else:
+    print('False')
+    
+print()
+print()
+
+print('l3 = ',l3);
+print()
+print('l4 = ',l4)
+
+for j in l3:
+    n=is_member2(j)
+    if n=='True':
+        print(j,' is present')
+        break;
+        
+if n=='True':
+    print(n)
+else:
+    print('False')
+
+
+Q-8_part-2
+
+  flag1=0
+  flag2=0
+  l1=['a','b','c','d'];
+  l2=['e','f','b','g'];
+  l3=['a','b','c','d'];
+  l4=['e','f','g','h'];
+
+  print('l1 = ',l1);
+  print()
+  print('l2 = ',l2)
+
+  for i in l1:
+      for j in l2:
+          #compare()
+          if i==j:
+              flag1=1;
+              print(i,' is in common')
+              break;
+
+  print()
+  print("Result for l1 & l2")
+  if flag1==1:
+      print('Ture')
+  else:
+      print('False')
+
+  print()
+  print()
+
+  print('l3 = ',l3);
+  print()
+  print('l4 = ',l4)
+
+  for i in l3:
+      for j in l4:
+          #compare()
+          if i==j:
+              flag2=1;
+              print(i,' is in common')
+              break;
+
+  print()
+  print("Result for l3 & l4")
+  if flag2==1:
+      print('Ture')
+  else:
+      print('False')
+
+
+Q9
+
+
+def histogram(lista):
+    for b in lista:
+        line=""
+        c=0
+        while c<b:
+            c+=1
+            line+="*"
+        print(line)
+
+arr=[]
+print("input the number of * you want in each line")
+print("input end to finish")
+while True:
+    n=input("input the number of * in this line:")
+    if n=="end":
+        break
+    else:
+        n=int(n)
+        arr.append(n)
+histogram(arr)
+
+
+
+
+*DAY2*
+
+
+Q1
+
+char1=str(input())
+int1=int(input())
+def generate_n_chars(int1,char1):
+    for i in range(0,int1):
+        print(char1,end="")
+generate_n_chars(int1,char1)
+
+
+Q2
+
+def max_in_list(lista):
+	return max(lista)
+lista=[]
+print("thisprogram will retrn the highest number in a list we introdduce , write break to finish")
+while true:
+	num=input("Introduce a num:")
+	if num="break":
+		break
+	else:
+		num=int(num)
+		lista.append(num)
+print("max nUm in list:",max_in_list(lista))
+
+
+Q3
+
+def map_to_lengths_for(words):
+    lengths = []
+    for word in words:
+        lengths.append(len(word))
+        return lengths
+def map_to_lengths_map(words):
+        return map(len,words)
+def map_to_lengths_lists(words):
+        return [len(word) for word in words]
+if __name__=="__main__":
+     words = ['abv','try me', 'test']
+     print  (map_to_lengths_for(words))
+     print  (map_to_lengths_map(words))
+     print  (map_to_lengths_lists(words))
+
+
+
+Q4
+
+def find_longest_word(list_of_words):
+    max = 0
+    for word in list_of_words:
+        if len(word) > max:
+            max = len(word)
+    return max
+
+lst = ['Apple','Orange','Banana','Guava','Pineapple']
+max_length = find_longest_word(lst)
+print("Using function -:")
+print("The longest length is :",max_length)
+print()
+print("Using Lambda function -:")
+length = 0
+word = lambda x:True,max(lst, key = len)
+length = len(word[1])
+print("The longest length is :",length)
+
+
+Q5
+
+def filter_long_words(string, number):
+    return list(filter(lambda word:len(word)>number, string.split()))
+
+words = input("Enter list of words:")
+num = int(input("Enter an integer:"))
+
+print("Words with length greater than input integer are:", filter_long_words(words, num))
+
+
+
+Q6
+print("Enter a phrase")
+mystr=str(input())
+mystr=mystr.replace(" ","")
+mystr=' '.join(e for e in mystr if e.isalnum())
+mystr=mystr.lower()
+revstring=mystr[::-1]
+if(mystr==revstring):
+    print ("palindrome")
+else:
+    print("Not palindrome")
+
+
+Q7	
+
+
+def pangran(arg):
+    if len(set('abcdefghijklmnopqrstuvwxyz')-set(arg.lower()))==0:
+        return True
+    else:
+        return False
+str = input("enter a string to check pangram:")
+if(pangran(str)):
+    print("it is pangram")
+else:
+    print("not a pangram")
+
+
+Q8
+
+def translate():
+    b=input("ENTER THE WORDS U WANT TO TRANSLATE:")
+    a=b.split(" ")
+    c=[]
+    for i in a:
+       c.append(dic[i])
+    print(c)
+
+dic={"merry":"god", "christmas":"jul", "and":"och", "happy":"gott", "new":"nytt", "year":"år"}
+translate()
+
+
+Q9
+
+def char_freq(inp):
+    char_dict={}
+    for c in inp:
+        if c in char_dict:
+            char_dict[c]+=1
+        else:
+            char_dict[c]=1
+    return char_dict
+
+inp=input("Enter a string:")
+print(char_freq(inp))
+
+
+Q10
+
+#create a file named 'mathematics.py' inside "%python_dir%\Lib\" and write the below code
+
+
+import numpy as np
+def Add(*elems):
+    i = 0
+    res = np.array(list(elems[0]))
+    try:
+        for elem in elems:
+            if (i>0):
+                res = np.add(res.tolist(),elem)
+            i=1
+        return res.tolist()
+    except:
+        print("Error Occurred!")
+        return None
+def Sub(*elems):
+    res = np.array(list(elems[0]))
+    i = 0
+    try:
+        for elem in elems:
+            if(i>0):
+                res = np.subtract(res.tolist(),elem)
+            i = 1
+        return res.tolist()
+    except:
+        print("Error Occurred!")
+        return None
+def Sort(arr):
+    try:
+        arr.sort()
+        return arr
+    except:
+        print("Error Occurred!")
+        return None
+    
+def Max(arr):
+    try:
+        return max(arr)
+    except:
+        print("Error Occurred!")
+        return None
+def Min(arr):
+    try:
+        return min(arr)
+    except:
+        print("Error Occurred!")
+        return None
+        
+        
+#the below code is to use the mathematics.py given above
+
+import mathematics as m
+c=m.Add([1,2,3,4],[3,2,1,4])
+d=m.Sub([1,2,3,4],[1,5,2,4])
+print(c)
+print(d)
+print(m.Max(c))
+print(m.Min(d))
+print(m.Sort(c))
+print(m.Sort(d))
+
+
+Q11
+
+
+
+
+
+
+Q12
+
+class DateClass:
+    def __init__(self, date, month, year):
+        self.date=date
+        self.month=month
+        self.year=year
+        
+    def mon(self):
+        print("Month=", self.month)
+        
+    def datee(self):
+        print("Month=",self.date)
+        
+    def yeaar(self):
+        print("year=",self.year)
+        
+
+dc=DateClass(10,'September',2018)
+
+dc.datee()
+dc.mon()
+dc.yeaar()
+
+
+Q13
+
+
+
+
+Q14
+
+import numpy as np
+list=[1,2,3,4,5,6,7]
+matrix=[[5,10,15,20,25],[30,35,40,45,50],[55,60,65,70,75]]
+print('array='+str(np.array((list))))
+print('array of zeros='+str(np.zeros([5,5])))
+print('unit matrix='+str(np.eye(4)))
+print('arange function='+str(np.arange(1,10,2)))
+print('random function='+str(np.random.rand(4)))
+print('random function='+str(np.random.randint(1,100,10)))
+a=np.arange(1,10)
+print('max value='+str(np.max(a)))
+print('min value='+str(np.min(a)))
+print('mean value='+str(np.mean(a)))
+print('sqr root='+str(np.sqrt(a)))
+print('power='+str(np.power(a,2)))
+import math as m
+print('ceiling function='+str(m.ceil(100.32)))
+print('floor fun='+str(m.floor(100.45)))
+print('exponent fun='+str(m.exp(100.12)))
+print('absolute fun='+str(m.fabs(-35.13)))
+print('fraction fun='+str(m.modf(100.15)))
+print('power fun='+str(m.pow(2,4)))
+print('square root='+str(m.sqrt(10)))
+print('sine fun='+str(m.sin(9)))
+print('cosine fun='+str(m.cos(15)))
+print('tan fun='+str(m.tan(30)))
+print('factorial fun='+str(m.factorial(9)))
+
