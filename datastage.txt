@@ -1,0 +1,4 @@
+emp*.exe to read multiple files at once
+
+
+final delimeter-how a file ends . for enter---its end

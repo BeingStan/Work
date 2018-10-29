@@ -1,0 +1,97 @@
+funnel..combine with same datatype
+transformer- make changes from source to target -arthmetic ops etc
+two comma together- null
+null value in a row makes that row rejected
+to fix the above problem reject mode = o/p from source
+
+timestamp to date conversion in tranformer
+timestamp to date or date to timestamp
+
+
+date format in  DS yyyy/mm/dd
+
+
+use union instead of funnel -no repeats there
+
+
+
+for single table- sort and remove duplicate
+for multiple tables- 
+
+
+
+
+
+
+by default it's inner join in joins in DS
+but if two tables don't have same column name, it won't work at all
+
+non equi join or self join isnt possible, only possible with look up
+
+
+merge allows matched and unmatched op too, join has only one op, but columns should match
+
+for unmatched columns, use lookup
+e.mgr=m.empno
+
+change capture compares two columns and has a column called change code with 3 columns
+0 for copy
+1 for insert
+2 for deletion
+3 for update
+here, first file is master file
+based on change code, we can perform ops
+drop column for insert= true
+explct and all values
+
+group function is done using aggregator in DS
+
+
+we can aggrgt without aggregator, by using transformer
+
+
+we can have same file as source and also as the target 
+
+change apply modifies tgt file based on before and after data. only the after data is captured inside
+
+
+
+
+
+
+
+convert one row/columns to multiple rows/columns is called pivoting
+horizontal - column into rows
+
+
+
+by default, datatype of stage variable is CHAR and size is 1
+
+
+surrogate key(temp primary key) is used in type2 
+in type 1 empno is primary key
+
+
+seq isn't dropped when table is dropped 
+indexes,constraints are also droppeed
+seq, procedures become invalid
+surrogate key isn't dropped as well
+
+the number we take in the file in SKG is the initial value amd it increments from there onwards
+
+
+--slowly changing dimensions
+
+
+
+
+full history type 2
+partial history type 3
+no history type 1
+
+
+
+9 types in DS
+
+
+
